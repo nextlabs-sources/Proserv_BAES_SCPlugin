@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<datasource-configuration>
+	<!-- Define database type data source in this section 
+		 Configuration value should be in c3p0 ComboPooledDataSource standard -->
+	<database>
+		<data-sources>
+			<data-source>
+				<name>BAE-System</name>
+				<driver-class>oracle.jdbc.OracleDriver</driver-class>
+				<jdbc-url>jdbc:oracle:thin:@GENORA01W12R2:1521:genorcl</jdbc-url>
+				<username>rmtadmin</username>
+				<password>s701df3c0313dffe700905c8c86eb91c7</password>
+				<min-pool-size>1</min-pool-size>
+				<acquire-increment>1</acquire-increment>
+				<max-pool-size>5</max-pool-size>
+				<max-statements>180</max-statements>
+				<idle-connection-test-period>60000</idle-connection-test-period>
+			</data-source>
+			<data-source>
+				<name>DB-CLASSIFIED_DOCUMENT</name>
+				<driver-class>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver-class>
+				<jdbc-url>jdbc:sqlserver://GENSQL01W12R2:1433;database=USER</jdbc-url>
+				<username>nextlabs</username>
+				<password>se868d7a944215768e5cfaf5ecc82cabd</password>
+				<min-pool-size>1</min-pool-size>
+				<acquire-increment>1</acquire-increment>
+				<max-pool-size>5</max-pool-size>
+				<max-statements>180</max-statements>
+				<idle-connection-test-period>60000</idle-connection-test-period>
+			</data-source>
+		</data-sources>
+	</database>
+	<!-- Define csv type data source in this section -->
+	<csv>
+		<data-sources>
+			<data-source>
+				<name>CSV-USER_ACCOUNT</name>
+				<file-path>../datasource/userlist.csv</file-path>
+				<properties>
+					<property>
+						<name>separator</name>
+						<value>;</value>
+					</property>
+					<property>
+						<name>column-count</name>
+						<value>16</value>
+					</property>
+				</properties>
+			</data-source>
+			<data-source>
+				<name>CSV-Platform</name>
+				<file-path>../datasource/platformlist.csv</file-path>
+				<properties>
+					<property>
+						<name>identifier-column</name>
+						<value>1</value>
+					</property>
+					<property>
+						<name>value-return-column</name>
+						<value>5</value>
+					</property>
+				</properties>
+			</data-source>
+		</data-sources>
+	</csv>
+</datasource-configuration>

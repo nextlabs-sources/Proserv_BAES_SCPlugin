@@ -1,0 +1,1 @@
+./buildDev "$1" "D:/nxt-build/build/P4/source_main_external" "1" "D:/nxt-build/build/P4/source_main_external/openjdk/jdk-11.0.14.1+1-win64" "D:/nxt-build/build/P4/source_main_external/apache-ant/apache-ant-1.10.7"
